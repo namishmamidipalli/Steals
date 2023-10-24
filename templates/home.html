@@ -1,4 +1,20 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+ 
+{% block container %}
+  <div class="top-pad">
+    {% for id, option in options.items() %}
+      <div class="well">
+        <h2>
+          <a href="{{ url_for('option', key=id) }}">{{option['name']}}</a>
+          <small>{{ option['price']}}</small>
+        </h2>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,7 +36,7 @@
 
     <main>
         <section>
-            <h1>Welcome to Steals.</h1>
+            <h1>Hello {{ user }}! Welcome to Steals.</h1>
             <p>This is a simple tracker that shows steals for events in your area. You can also choose to track events and we will continually update you on the lowest prices available.</p>
         </section>
 
@@ -43,4 +59,4 @@
         <p>&copy; 2023 Steals. All rights reserved.</p>
     </footer>
 </body>
-</html>
+</html> -->
