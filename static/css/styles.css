@@ -1,0 +1,56 @@
+
+body, h1, h2, form {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.search-section, .user-tracking, .price-threshold {
+  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, select, button {
+  padding: 5px;
+  margin: 5px 0;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* .event-results {
+} */
+
+/* Add more styles as needed */

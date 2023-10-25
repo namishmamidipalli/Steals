@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Steals</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Steals</h1>
+    </header>
+
+    <section class="search-section">
+        <h2>Search for Events</h2>
+        <form id="event-search-form">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <section class="event-results">
+        <h2>Event Results</h2>
+        <!-- Display search results here -->
+    </section>
+
+    <section class="user-tracking">
+        <h2>Track Events</h2>
+        <!-- List of events user is tracking -->
+    </section>
+
+    <section class="price-threshold">
+        <h2>Set Price Threshold</h2>
+        <form id="threshold-form">
+            <label for="event">Select an event:</label>
+            <select id="event" name="event">
+                <!-- Options to select tracked events -->
+            </select>
+            <label for="threshold">Price Threshold:</label>
+            <input type="number" id="threshold" name="threshold" min="0" required>
+            <button type="submit">Set Threshold</button>
+        </form>
+    </section>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Hello {{ user }}! Welcome to Steals.</h1>
+            <p>This is a simple tracker that shows steals for events in your area. You can also choose to track events and we will continually update you on the lowest prices available.</p>
+        </section>
+
+        <section>
+            <h2>About Us</h2>
+            <p>Learn more about our company and what we do.</p>
+        </section>
+
+        <section>
+            <h2>Our Services</h2>
+            <ul>
+                <li>Service 1</li>
+                <li>Service 2</li>
+                <li>Service 3</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Steals. All rights reserved.</p>
+    </footer>
+</body>
+</html> -->
