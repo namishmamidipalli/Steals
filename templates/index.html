@@ -22,11 +22,19 @@
 
     <section class="event-results">
         <h2>Event Results</h2>
-        <!-- Display search results here -->
+        <ul>
+            {% for event in event_search_results %}
+                <li>
+                    <h3>{{ event.title }}</h3>
+                    <p>Date: {{ event.datetime_local }}</p>
+                    <p>Venue: {{ event.venue.name }}</p>
+                </li>
+            {% endfor %}
+        </ul>
     </section>
 
     <section class="user-tracking">
-        <h2>Track Events</h2>
+        <h2>Tracked Events</h2>
         <!-- List of events user is tracking -->
     </section>
 
