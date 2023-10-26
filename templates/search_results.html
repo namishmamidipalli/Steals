@@ -11,12 +11,12 @@
     <section class="event-results">
         <h2>Event Results</h2>
         <ul>
-            {% for performer in event_search_results['performers'] %}
+            {% for event in event_search_results['events'] %}
                 <li>
-                    <h3>{{ performer['name'] }}</h3>
-                    <p>Images: {{ performer['images'] }}</p>
-                    <p>Links: {{ performer['links'] }}</p>
-                    <p>Genre: {{ performer['genres'] }}</p>
+                    <h3>{{ event['title'] }}</h3>
+                    <p>Stats: {{ event['stats'] }}</p>
+                    <p>Links: {{ event['url'] }}</p>
+                    <p>Time: {{ event['datetime_local'] }}</p>
                     <!-- Add other venue details you want to display -->
                 </li>
             {% endfor %}
