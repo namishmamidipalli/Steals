@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Search Results</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/indexstyles.css">
 </head>
 <body>
     <header>
@@ -10,17 +11,32 @@
 
     <section class="event-results">
         <h2>Event Results</h2>
-        <ul>
-            {% for event in event_search_results['events'] %}
-                <li>
-                    <h3>{{ event['title'] }}</h3>
-                    <p>Stats: {{ event['stats'] }}</p>
-                    <p>Links: {{ event['url'] }}</p>
-                    <p>Time: {{ event['datetime_local'] }}</p>
-                    <!-- Add other venue details you want to display -->
-                </li>
-            {% endfor %}
-        </ul>
+        {% if event_search_results['events'] %}
+            <ul>
+                {% for event in event_search_results['events'] %}
+                    <li>
+                        <h3>{{ event['title'] }}</h3>
+                        <p>Average Price: ${{ event['stats']['average_price'] }}</p>
+                        <p>Best Current Deal: ${{ event['stats']['lowest_price_good_deals'] }}</p>
+                        <p>Links: {{ event['url'] }}</p>
+                        <p>Time: {{ event['datetime_local'] }}</p>
+                        <!-- Add other venue details you want to display -->
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Sorry, {{ performer }} isn't performing in {{ location }} anytime soon. Here's some recommendations:</p>
+            <ul>
+                {% for recommendation in recommendations['recommendations'] %}
+                    <li>
+                        <h3>{{ recommendation['performer']['name'] }}</h3>
+                        <p>Event Count: {{ recommendation['performer']['stats']['event_count'] }}</p>
+                        <p>Upcoming Events: {{ recommendation['performer']['num_upcoming_events'] }}</p>
+                        <p><a href="{{ recommendation['performer']['url'] }}">Learn more</a></p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
     </section>
 </body>
 </html>
