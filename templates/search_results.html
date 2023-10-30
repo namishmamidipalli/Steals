@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Search Results</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/indexstyles.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
 </head>
 <body>
     <header>
@@ -24,19 +24,21 @@
                     </li>
                 {% endfor %}
             </ul>
-        {% else %}
-            <p>Sorry, {{ performer }} isn't performing in {{ location }} anytime soon. Here's some recommendations:</p>
+            {% else %}
+            <p>Sorry, {{ artist }} isn't performing in {{ location }} anytime soon. Here's some events similar to those in {{ location }}:</p>
             <ul>
                 {% for recommendation in recommendations['recommendations'] %}
                     <li>
-                        <h3>{{ recommendation['performer']['name'] }}</h3>
-                        <p>Event Count: {{ recommendation['performer']['stats']['event_count'] }}</p>
-                        <p>Upcoming Events: {{ recommendation['performer']['num_upcoming_events'] }}</p>
-                        <p><a href="{{ recommendation['performer']['url'] }}">Learn more</a></p>
+                        <!-- <h3>Venue: {{ recommendation['event']['venue']['name'] }}</h3> -->
+                        <h3>{{ recommendation['event']['performers'][0]['name'] }} at {{ recommendation['event']['venue']['name'] }}</h3>
+                        <h3>Link: {{ recommendation['event']['performers'][0]['url'] }}</h3>
+                        <!-- You can add more details here if needed -->
                     </li>
                 {% endfor %}
             </ul>
         {% endif %}
+        
+        
     </section>
 </body>
 </html>

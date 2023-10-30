@@ -1,56 +1,92 @@
-
-body, h1, h2, form {
-  margin: 0;
-  padding: 0;
+/* Reset some default styles for cross-browser consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+/* Set a background color for the whole page */
+/* body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-}
-
-.search-section, .user-tracking, .price-threshold {
-  background-color: #fff;
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-}
-
-label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-input, select, button {
-  padding: 5px;
-  margin: 5px 0;
-}
-
-button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #555;
-}
-
-/* .event-results {
+/* Style the header section */
+/* header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
 } */
 
-/* Add more styles as needed */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+/* Style the h1 element within the header */
+header h1 {
+    font-size: 2rem;
+}
+
+/* Style the event results section */
+.event-results {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the h2 element within the event results section */
+.event-results h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Style the list items within the event results section */
+.event-results li {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Style links within list items */
+.event-results li a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Change link color on hover */
+.event-results li a:hover {
+    color: #0056b3;
+}
+
+/* Style the recommendations section */
+.event-results .recommendations {
+    margin-top: 2rem;
+}
+
+/* Add some spacing between recommendations */
+.event-results .recommendations li {
+    margin-bottom: 1rem;
+}
+
+/* Remove bullet points from list items */
+.event-results ul {
+    list-style: none;
+}
+
