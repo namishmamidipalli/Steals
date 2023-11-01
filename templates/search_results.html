@@ -32,6 +32,10 @@
                         <!-- <h3>Venue: {{ recommendation['event']['venue']['name'] }}</h3> -->
                         <h3>{{ recommendation['event']['performers'][0]['name'] }} at {{ recommendation['event']['venue']['name'] }}</h3>
                         <h3>Link: {{ recommendation['event']['performers'][0]['url'] }}</h3>
+                        <h3>{{ recommendation['event']['performers'][0]['images']['huge'] }}</h3>
+                        <!-- <img src= {{ recommendation['event']['performers'][0]['images']['huge'] }}> -->
+                        <img src="{{ recommendation['event']['performers'][0]['images']['huge'] }}" alt="{{ recommendation['event']['performers'][0]['name'] }}">
+                        
                         <!-- You can add more details here if needed -->
                     </li>
                 {% endfor %}

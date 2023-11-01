@@ -90,3 +90,18 @@ header h1 {
     list-style: none;
 }
 
+/* Style the images within list items */
+.event-results li img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below images */
+    margin: 0 auto; /* Center align images */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem; /* Add some space above images */
+}
+
+.event-results li:hover .artist-image {
+    display: block;
+}
