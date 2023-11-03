@@ -141,3 +141,17 @@ button[type="submit"] {
   border-radius: 4px;
   cursor: pointer;
 }
+
+.box-link {
+  display: inline-block; /* Make it a block-level element */
+  padding: 10px 20px; /* Add padding to create space around the link */
+  background-color: #000; /* Set a black background color */
+  color: #fff; /* Set white text color */
+  text-decoration: none; /* Remove the underline from the link */
+  border-radius: 5px; /* Add rounded corners to the box */
+}
+
+/* Change link color on hover */
+.box-link:hover {
+  background-color: #333; /* Darken the background color on hover */
+}

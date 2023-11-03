@@ -17,8 +17,8 @@
                     <li>
                         <h3>{{ event['title'] }}</h3>
                         <p>Average Price: ${{ event['stats']['average_price'] }}</p>
-                        <p>Best Current Deal: ${{ event['stats']['lowest_price_good_deals'] }}</p>
-                        <p>Links: {{ event['url'] }}</p>
+                        <!-- <p>Best Current Deal: ${{ event['stats']['lowest_price_good_deals'] }}</p> -->
+                        <a href="{{ event['url'] }} " class ="box-link"> Best Deals starting at ${{ event['stats']['lowest_price_good_deals'] }}</a>
                         <p>Time: {{ event['datetime_local'] }}</p>
                         <!-- Add other venue details you want to display -->
                     </li>
@@ -32,7 +32,8 @@
                         <!-- <h3>Venue: {{ recommendation['event']['venue']['name'] }}</h3> -->
                         <h3>{{ recommendation['event']['performers'][0]['name'] }} at {{ recommendation['event']['venue']['name'] }}</h3>
                         <h3>Link: {{ recommendation['event']['performers'][0]['url'] }}</h3>
-                        <h3>{{ recommendation['event']['performers'][0]['images']['huge'] }}</h3>
+                        <!-- <h3>{{ recommendation['event']['performers'][0]['images']['huge'] }}</h3> -->
+                        <a href="{{ recommendation['event']['performers'][0]['url'] }}" class="box-link">Visit the Event</a>
                         <!-- <img src= {{ recommendation['event']['performers'][0]['images']['huge'] }}> -->
                         <img src="{{ recommendation['event']['performers'][0]['images']['huge'] }}" alt="{{ recommendation['event']['performers'][0]['name'] }}">
                         
