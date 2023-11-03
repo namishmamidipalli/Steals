@@ -45,7 +45,7 @@ def search_events():
             print(pid)
 
             if pid.get('meta', {}).get('total') == 0:
-                print("that artist has no events at all coming up, and its not giving them any recommendations. WTF? ")
+                print("that artist has no events at all coming up, and its not giving them any recommendations. WTF? why? ")
                 return render_template('index.html', event_search_results=req.json())
 
 
